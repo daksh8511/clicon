@@ -1,0 +1,12 @@
+.category :hover .arr{
+    transform: rotateZ(-180deg);
+}
+
+.category:hover .allcategories{
+    display: block;
+}
+
+.allcategories {
+    width: 200px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
