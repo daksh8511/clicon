@@ -11,14 +11,9 @@ import { FaUser } from "react-icons/fa";
 import logo from "/assets/Logo.png";
 import { Link } from "react-router-dom";
 import { useSelector } from "react-redux";
-import { CiLogout } from "react-icons/ci";
-import { useAuth0 } from "@auth0/auth0-react";
+import { CiShop } from "react-icons/ci";
 
 const Header = () => {
-  const { loginWithRedirect, logout, isAuthenticated, user, isLoading } =
-    useAuth0();
-
-  console.log(user)
 
   const getData = useSelector((state) => state.cart.data);
   const cartLength = useSelector((state) => state.cart.inCart);
@@ -145,24 +140,11 @@ const Header = () => {
             </span>
           </div>
 
-          {isAuthenticated ? (
-            <Link to={`/clicon/${user.nickname}`}>
-            <FaUser
-                className="text-white text-2xl"
-              />
-            </Link>
+          <div className="flex items-center gap-2 text-white">
+            <CiShop className="text-3xl" />
+            <h2>Become A Seller</h2>
+          </div>
 
-          ) : (
-            <div className="user cursor-pointer">
-              <h2 onClick={()=> loginWithRedirect()}>Login</h2>
-              {/* <FaUser
-                onClick={() => loginWithRedirect()}
-                className="text-white text-2xl"
-              /> */}
-            </div>
-          )}
-
-          <div></div>
         </div>
       </div>
     </section>

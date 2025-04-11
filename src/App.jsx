@@ -44,8 +44,8 @@ const App = () => {
         <Route path="/clicon/tv_home_applience" element={<Tv_Home_Applience />} />
         <Route path="/clicon/smartwatch" element={<Smartwatch />} />
         <Route path="/clicon/login" element={<Login />} />
-
-        <Route path="/clicon/:user" element={<UserDetails />} />
+        
+        <Route path="/clicon/:seller" />
 
         <Route path="*" element={<Error />} />
       </Routes>
